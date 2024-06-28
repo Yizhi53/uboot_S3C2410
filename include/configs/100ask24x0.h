@@ -37,6 +37,8 @@
 #define	CONFIG_S3C2410		1	/* in a SAMSUNG S3C2410 SoC     */
 #define CONFIG_SMDK2410		1	/* on a SAMSUNG SMDK2410 Board  */
 
+#define CFG_FLASH_CFI_DRIVER	1
+
 /* input clock of PLL */
 #define CONFIG_SYS_CLK_FREQ	12000000/* the SMDK2410 has 12MHz input clock */
 
@@ -153,11 +155,10 @@
 /*-----------------------------------------------------------------------
  * FLASH and environment organization
  */
-
-#define CONFIG_AMD_LV400	1	/* uncomment this if you have a LV400 flash */
 #if 0
-#define CONFIG_AMD_LV800	1	/* uncomment this if you have a LV800 flash */
+#define CONFIG_AMD_LV400	1	/* uncomment this if you have a LV400 flash */
 #endif
+#define CONFIG_AMD_LV800	1	/* uncomment this if you have a LV800 flash */
 
 #define CFG_MAX_FLASH_BANKS	1	/* max number of memory banks */
 #ifdef CONFIG_AMD_LV800
